@@ -9,9 +9,9 @@ qt4_wrap_cpp(SCIHTML_MOC_SRCS ${SCIHTML_HDRS})
 qt4_wrap_ui(SCIHTML_UI_FILES ${SCIHTML_UIS})
 qt4_add_resources(SCIHTML_QRC_FILES ${SCIHTML_QRCS})
 
-include_directories("${CMAKE_BINARY_DIR}/src")
+include_directories("${CMAKE_BINARY_DIR}/src" ${QSCINTILLA2_INCLUDE_DIR})
 
 add_executable(scihtml ${SCIHTML_SRCS} ${SCIHTML_HDRS} ${SCIHTML_MOC_SRCS} ${SCIHTML_UI_FILES} ${SCIHTML_QRC_FILES})
-target_link_libraries(scihtml ${QT_LIBRARIES} qscintilla2)
+target_link_libraries(scihtml ${QT_LIBRARIES} ${QSCINTILLA2_LIBRARY})
 
 install(TARGETS scihtml DESTINATION bin)
