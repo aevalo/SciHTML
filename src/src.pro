@@ -1,5 +1,5 @@
 TEMPLATE      = app
-TARGET        = SciHTML
+TARGET        = scihtml
 VERSION       = 0.0.1
 
 HEADERS       = mainwindow.h \
